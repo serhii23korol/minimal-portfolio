@@ -1,0 +1,97 @@
+/* Global Variables */
+:root {
+    /* Light theme colors */
+    --bg-color: #FFFFFF;
+    --text-color: #000000;
+    --h1-color: #0077B6;
+    --h2-color: #000814;
+    --p-color: #000814;
+    --skills-color: #0077B6;
+
+    /* Dark theme colors */
+    --bg-color-dark: #000814;
+    --text-color-dark: #f0f0f0;
+    --h1-color-dark: #FFD700;
+    --h2-color-dark: #ffffff;
+    --p-color-dark: #ffffff;
+    --skills-color-dark: #FFD700;
+}
+
+/* Body and General Styles */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Cabin', serif;
+    text-align: center;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+body.dark {
+    --bg-color: var(--bg-color-dark);
+    --text-color: var(--text-color-dark);
+    --h1-color: var(--h1-color-dark);
+    --h2-color: var(--h2-color-dark);
+    --p-color: var(--p-color-dark);
+    --skills-color: var(--skills-color-dark);
+}
+
+/* Header Styles */
+header {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Button Styles */
+button {
+    background: none;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Topography Styles */
+h1 {
+    font-size: 120px;
+    color: var(--h1-color);
+    margin: 15px;
+}
+
+h2 {
+    font-size: 38px;
+    color: var(--h2-color);
+    margin: 15px;
+}
+
+p {
+    font-size: 16px;
+    color: var(--p-color);
+    margin: 5px;
+}
+
+/* Main Styles */
+main {
+    position: absolute;
+    bottom: 30%;
+    width: 99%;
+}
+
+/* Skill Styles */
+#skills {
+    font-size: 38px;
+    color: var(--skills-color);
+    margin: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+    animation: blink-cursor 0.75s step-end infinite;
+    display: inline-block;
+    height: 50px;
+}
+
+/* Cursor Blink Animation */
+@keyframes blink-cursor {
+    from { border-right-color: rgba(0, 0, 0, 1); }
+    to { border-right-color: transparent; }
+}
